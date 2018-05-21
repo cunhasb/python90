@@ -9,6 +9,12 @@ class Car:
         print ("Opening door: %s" % str(door_number))
 
     def blinker_control(self, left_blinker="Off", right_blinker="Off"):
+        if left_blinker == "On":
+            self.left_blinker = left_blinker
+            self.right_blinker = "Off"
+        elif right_blinker == "On":
+            self.right_blinker = right_blinker
+            self.left_blinker = "Off"
         self.left_blinker = left_blinker
         self.right_blinker = right_blinker
         print ("L: %s, R: %s" % (self.left_blinker, self.right_blinker))
