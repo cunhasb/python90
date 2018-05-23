@@ -1,7 +1,11 @@
-# informal implementation iterators train sequence
+"""collection implementation iterators train sequence
+What do you gain?
+You are now being more explicit that you are implementing a sequence, and you are inherenting five more methods with it. __getitem__,__contains__,__iter__,__reversed__,index,count
+"""
+import collections
 
 
-class Train(object):
+class Train(collections.Sequence):
 
     def __init__(self, cars):
         self.cars = cars
